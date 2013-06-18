@@ -56,7 +56,7 @@ $_SESSION['uploaded'] = 0;
 		<div class="container">
 
 			<form action="upload.php" method="post" enctype="multipart/form-data">
-			<legend>Convert an mp3 file (&lt;3MB) to multiple amr formats!</legend>
+			<legend>Convert an mp3 file (&lt;1MB) to multiple amr formats!</legend>
 			<div class="row">
 				<div class="span8">
 					<div class="row">

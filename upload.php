@@ -9,7 +9,7 @@ $allowedExts = array("mp3");
 $tmp = explode(".", $_FILES["file"]["name"]);
 $extension = end($tmp);
 if (($_FILES["file"]["type"] == "audio/mp3")
-	&& ($_FILES["file"]["size"] < 3000000)
+	&& ($_FILES["file"]["size"] < 1000000)
 	&& in_array($extension, $allowedExts)) {
 	if ($_FILES["file"]["error"] > 0) {
 		echo "Error: " . $_FILES["file"]["error"];

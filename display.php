@@ -67,7 +67,7 @@ session_start()
 						} else {
 							$uploaded_file = "audio/default/instant_crush.mp3";
 							$upload_path = "audio/default/";
-							$str = convert($uploaded_file);
+							$str = convert($uploaded_file, $upload_path);
 						}
 						echo $str;
 						?>
