@@ -37,3 +37,12 @@ Note: if you ever get an error in the following process, sudo !!
 	* `chmod +x /opt/lampp/htdocs/amr_simulation/audio/cron.sh`
 	* `sudo crontab -e`
 	* `0 0 * * * /opt/lampp/htdocs/amr_simulation/audio/cron.sh`
+
+1. Enable ssh and start lampp on boot
+	* `sudo apt-get install openssh-server`
+	* `/etc/init.d/ssh start`
+	* `sudo vim /etc/init.d/lampp`
+	* Place the following lines in script: `#!/bin/bash` and `/opt/lampp/lampp start`
+	* sudo chmod +x /etc/init.d/lampp
+	* cd /etc/init.d
+	* sudo update-rc.d lampp defaults
