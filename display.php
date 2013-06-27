@@ -65,7 +65,7 @@ session_start()
 							$upload_path = "audio/user_" . session_id() . "/";
                             $str = convert($uploaded_file, $upload_path);
 						} else {
-							$uploaded_file = "audio/default/instant_crush.mp3";
+							$uploaded_file = "audio/default/seed_feed.mp3";
 							$upload_path = "audio/default/";
 							$str = convert($uploaded_file, $upload_path);
 						}

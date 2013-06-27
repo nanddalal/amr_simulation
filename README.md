@@ -1,7 +1,7 @@
 amr_simulation
 ==============
 
-Note: if you ever get an error in the following process, sudo !!
+Note: Must run `sudo /opt/lampp/lampp restart` on startup
 
 1. Get the latest versions of opencore-amr and vo-amrwbenc:
 	* http://sourceforge.net/projects/opencore-amr/
