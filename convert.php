@@ -44,11 +44,11 @@ function convert($uploaded_file, $upload_path) {
 			}
 	}
 
-	$str = "";
+	$str1 = "";
 	for ($i = 0; $i < count($narrow_band); $i++) {
-		$str .= "
+		$str1 .= "
 		<div class='span4 lightblue'>
-			<label><a href='" . $upload_path . $narrow_names[$i] . ".amr'>" . $narrow_band[$i] . "</a></label>
+			<label><a href='" . $upload_path . $narrow_names[$i] . ".amr'>NB " . $narrow_band[$i] . "</a></label>
 			<audio controls>
 				<source src='" . $upload_path . $narrow_names[$i] . ".wav' type='audio/wav'>
 				<script>
@@ -58,10 +58,12 @@ function convert($uploaded_file, $upload_path) {
 		</div><!--/span-->
 		";
 	}
+
+	$str2 = "";
 	for ($i = 0; $i < count($wide_band); $i++) {
-		$str .= "
+		$str2 .= "
 		<div class='span4 lightblue'>
-			<label><a href='" . $upload_path . $wide_names[$i] . ".amr'>" . $wide_band[$i] . "</a></label>
+			<label><a href='" . $upload_path . $wide_names[$i] . ".amr'>WB " . $wide_band[$i] . "</a></label>
 			<audio controls>
 				<source src='" . $upload_path . $wide_names[$i] . ".wav' type='audio/wav'>
 				<script>
@@ -71,6 +73,6 @@ function convert($uploaded_file, $upload_path) {
 		</div><!--/span-->
 		";
 	}
-	return $str;
+	return array($str1, $str2);
 }
 ?>
