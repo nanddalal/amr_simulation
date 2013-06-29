@@ -53,25 +53,33 @@ session_start()
 
 		<div class="container">
 
+		<?php
+		include_once "convert.php";
+		if ($_SESSION['uploaded'] == 1) {
+			$uploaded_file = "audio/user_" . session_id() . "/in.mp3";
+			$upload_path = "audio/user_" . session_id() . "/";
+			list($str1, $str2) = convert($uploaded_file, $upload_path, 1);
+		} else {
+			$uploaded_file = "audio/default/recording.mp3";
+			$upload_path = "audio/default/";
+			list($str1, $str2) = convert($uploaded_file, $upload_path, 0);
+		}
+		?>
+
 			<form action="index.php" method="get">
-			<legend>Narrow and Wide Band Conversions</legend>
+			<legend>Narrow Band Conversions</legend>
 			<div class="row">
 				<div class="span12">
 					<div class="row">
-						<?php
-						include_once "convert.php";
-						if ($_SESSION['uploaded'] == 1) {
-							$uploaded_file = "audio/user_" . session_id() . "/in.mp3";
-							$upload_path = "audio/user_" . session_id() . "/";
-                            list($str1, $str2) = convert($uploaded_file, $upload_path, 1);
-						} else {
-							$uploaded_file = "audio/default/recording.mp3";
-							$upload_path = "audio/default/";
-							list($str1, $str2) = convert($uploaded_file, $upload_path, 0);
-						}
-						echo $str1;
-						echo $str2;
-						?>
+						<?php echo $str1; ?>
+					</div>
+				</div><!--/span-->
+			</div><!--/row-->
+			<legend>Wide Band Conversions</legend>
+			<div class="row">
+				<div class="span12">
+					<div class="row">
+						<?php echo $str2; ?>
 					</div>
 				</div><!--/span-->
 			</div><!--/row-->
