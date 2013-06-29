@@ -63,11 +63,11 @@ session_start()
 						if ($_SESSION['uploaded'] == 1) {
 							$uploaded_file = "audio/user_" . session_id() . "/in.mp3";
 							$upload_path = "audio/user_" . session_id() . "/";
-                            list($str1, $str2) = convert($uploaded_file, $upload_path);
+                            list($str1, $str2) = convert($uploaded_file, $upload_path, 1);
 						} else {
-							$uploaded_file = "audio/default/seed_feed.mp3";
+							$uploaded_file = "audio/default/recording.mp3";
 							$upload_path = "audio/default/";
-							list($str1, $str2) = convert($uploaded_file, $upload_path);
+							list($str1, $str2) = convert($uploaded_file, $upload_path, 0);
 						}
 						echo $str1;
 						echo $str2;
