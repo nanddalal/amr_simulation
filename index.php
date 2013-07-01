@@ -56,11 +56,11 @@ $_SESSION['uploaded'] = 0;
 		<div class="container">
 
 			<form action="upload.php" method="post" enctype="multipart/form-data">
-			<legend>Convert an mp3 file (&lt;1MB) to multiple amr formats!</legend>
+			<legend>Convert an mp3 (&lt;1MB) to multiple AMR formats!</legend>
 			<div class="row">
-				<div class="span8">
+				<div class="span10">
 					<div class="row">
-						<div class="span2 lightblue">
+						<div class="span4 lightblue">
 							<label>Upload File</label>
 							<div class="fileupload fileupload-new" data-provides="fileupload">
 								<div class="input-append">
@@ -68,6 +68,13 @@ $_SESSION['uploaded'] = 0;
 								</div>
 							</div>
 						</div><!--/span-->
+						<div class="span2 lightblue">
+							<label>OR</label>
+						</div>
+						<div class="span4 lightblue">
+							<a href="http://recordmp3.org/">Record an MP3</a>
+							<!-- -->
+						</div>
 					</div>
 				</div><!--/span-->
 			</div><!--/row-->
@@ -75,7 +82,7 @@ $_SESSION['uploaded'] = 0;
 			</form>
 
 			<form action="display.php" method="post" enctype="multipart/form-data">
-			<legend>Convert the default mp3 to multiple amr formats!</legend>
+			<legend>Listen to the default mp3 in multiple AMR formats!</legend>
 			<div class="row">
 				<div class="span8">
 					<button type="submit" class="btn btn-primary">Convert!</button>

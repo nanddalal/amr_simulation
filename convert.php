@@ -1,10 +1,10 @@
 <?php
 function convert($uploaded_file, $upload_path, $c) {
 	putenv("LD_LIBRARY_PATH=/usr/local/lib");
-	$narrow_band = array('4.75k','5.15k','5.90k','6.70k','7.40k','7.95k','10.20k','12.20k');
-	$narrow_names = array('475k','515k','590k','670k','740k','795k','1020k','1220k');
-	$wide_band = array('14.25k','15.85k','18.25k','19.85k','23.05k','23.85k');
-	$wide_names = array('1425k','1585k','1825k','1985k','2305k','2385k');
+	$narrow_band = array('1.80k','4.75k','5.15k','5.90k','6.70k','7.40k','7.95k','10.20k','12.20k');
+	$narrow_names = array('180k','475k','515k','590k','670k','740k','795k','1020k','1220k');
+	$wide_band = array('6.60k','8.85','12.65','14.25k','15.85k','18.25k','19.85k','23.05k','23.85k');
+	$wide_names = array('660k','885k','1265k','1425k','1585k','1825k','1985k','2305k','2385k');
 
 	if ($c == 1) {
 	for ($i = 0; $i < count($narrow_band); $i++) {
